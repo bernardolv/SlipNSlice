@@ -1,0 +1,15 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/HeroAreaScaling.cs">
+    <Files>
+      <File FileName="Assets/CardAreaScaling.cs" Line="35" Column="2" />
+      <File FileName="Assets/HealthBarAreaScaling.cs" Line="6" Column="1" />
+      <File FileName="Assets/CanvasBehaviour.cs" Line="10" Column="27" />
+      <File FileName="Assets/HeroAreaScaling.cs" Line="43" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
