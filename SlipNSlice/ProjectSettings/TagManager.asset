@@ -3,7 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Undefined
+  - Ground
+  - Seed
+  - Wall
+  - Fire
+  - Water
+  - Grass
+  - Dark
+  - Outerwall
   layers:
   - Default
   - TransparentFX
@@ -13,7 +22,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Other
   - 
   - 
   - 

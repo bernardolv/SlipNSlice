@@ -39,5 +39,8 @@ public class CanvasBehaviour : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			setWidth ();
 		}
+		if (height != RTransform.rect.height) {
+			setWidth ();
+		}
 	}
 }
