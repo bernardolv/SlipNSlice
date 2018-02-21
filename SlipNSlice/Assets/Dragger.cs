@@ -18,6 +18,9 @@ public class Dragger : MonoBehaviour {
 	}
 
 	void Update(){
+		if (Input.GetKeyDown (KeyCode.T)) {
+			ResetTile ();
+		}
 	}
 
 	void OnMouseDown() {
@@ -95,5 +98,8 @@ public class Dragger : MonoBehaviour {
 
 			}
 		}
+	}
+	void ResetTile(){
+		transform.position = restingpoint;
 	}
 }

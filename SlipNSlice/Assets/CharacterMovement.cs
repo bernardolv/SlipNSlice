@@ -99,6 +99,7 @@ public class CharacterMovement : MonoBehaviour {
 
 			} else if (nextaction == "Outerwall_Action") {
 				elementchanger.RemoveElement ();
+				elementchanger.RemoveNumber ();
 				nextaction = null;			}
 			else if (nextaction == "Left_Action") {
 				tiletotest = currenttile;

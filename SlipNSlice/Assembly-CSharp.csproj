@@ -63,8 +63,11 @@
      <Compile Include="Assets\DungeonBackgroundScaling.cs" />
      <Compile Include="Assets\HealthBarAreaScaling.cs" />
      <Compile Include="Assets\HeroAreaScaling.cs" />
+     <Compile Include="Assets\HeroStats.cs" />
+     <Compile Include="Assets\NumberChanger.cs" />
      <Compile Include="Assets\OuterwallBehaviour.cs" />
      <Compile Include="Assets\ResolutionBehaviour.cs" />
+     <Compile Include="Assets\ScoreKeeper.cs" />
      <Compile Include="Assets\TagGiver.cs" />
      <Compile Include="Assets\TileHandler.cs" />
  <Reference Include="Facebook.Unity.Settings">

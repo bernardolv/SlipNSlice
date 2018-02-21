@@ -1,30 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ChangeElement : MonoBehaviour {
-	string[] elements = new string[]{"Fire", "Water", "Grass", "Dark", "Light"};
+	string[] elements = new string[]{"Fire", "Water", "Grass", "Dark"};
+	int[] numbers = new int[]{1,2,3,4};
 	string myelement;
 	SpriteRenderer myspriterenderer;
 	Color mycolor;
-
+	public GameObject mycanvas;
+	int mynumber;
+	public Text mytext;
 	// Use this for initialization
 	void Start () {
 		myspriterenderer = GetComponent<SpriteRenderer> ();
-		int index = Random.Range(0, elements.Length);
-		myelement = elements[index];
-		Debug.Log(myelement);
-		AssignColor ();
+		AssignColor ();	
+		AssignNumber ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.R)){
 			RemoveElement();
+			RemoveNumber ();
 		}
 		if (Input.GetKeyDown (KeyCode.T)) {
 			if (myelement == null) {
 				AssignColor ();
+				AssignNumber ();
 			}
 		}
 	}
@@ -49,8 +53,19 @@ public class ChangeElement : MonoBehaviour {
 			myspriterenderer.color = new Color(1, .5f, 25 / 255f, 157 / 255f);
 		}
 	}
+
+	public void AssignNumber(){
+		int index = Random.Range (0, numbers.Length);
+		mynumber = numbers [index];
+		string mynumberstring = mynumber.ToString ();
+		mycanvas.GetComponent<Text>().text = mynumberstring;
+
+	}
 	public void RemoveElement(){
 		myelement = null;
 		myspriterenderer.color = new Color (1, 1, 1, .5f);
+	}
+	public void RemoveNumber(){
+		mycanvas.GetComponent<Text> ().text = " ";
 	}
 }

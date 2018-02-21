@@ -12,9 +12,8 @@ public class Card {
 	public int Defense;
 	public int Level;
 	public int experience;
-	public int levelexperience;
 
-	public Card (int newID, string newName, string newElement, string newActiveSkill, string newPassiveSkill, int newAttack, int newDefense){
+	public Card (int newID, string newName, string newElement, string newActiveSkill, string newPassiveSkill, int newAttack, int newDefense, int newLevel, int newExperience){
 		ID = newID;
 		Name = newName;
 		Element = newElement;
@@ -22,6 +21,9 @@ public class Card {
 		PassiveSkill = newPassiveSkill;
 		Attack = newAttack;
 		Defense = newDefense;
+		Level = newLevel;
+		experience = newExperience;
+
 
 	}
 	// Use this for initialization
