@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class ChangeElement : MonoBehaviour {
 	string[] elements = new string[]{"Fire", "Water", "Grass", "Dark"};
 	int[] numbers = new int[]{1,2,3,4};
-	string myelement;
+	public string myelement;
 	SpriteRenderer myspriterenderer;
 	Color mycolor;
 	public GameObject mycanvas;
-	int mynumber;
+	public int mynumber;
 	public Text mytext;
 	// Use this for initialization
 	void Start () {
@@ -41,7 +41,7 @@ public class ChangeElement : MonoBehaviour {
 			myspriterenderer.color = new Color(173/255f,3/255f,3/255f,255/255f);
 		}
 		if (myelement == "Water") {
-			myspriterenderer.color = new Color(41/255f,63/255f,206/255f,171/255f);
+			myspriterenderer.color = new Color(255/255f,218/255f,154/255f,255/255f);
 		}
 		if (myelement == "Grass") {
 			myspriterenderer.color = Color.green;

@@ -31,6 +31,7 @@ public class CharacterMovement : MonoBehaviour {
 	bool readytoturnoff;
 	GameObject walltoturnoff;
 	ChangeElement elementchanger;
+	int blockCounter;
 	// Use this for initialization
 	void Start () {
 		//current tile works as a target to move to
@@ -56,11 +57,15 @@ public class CharacterMovement : MonoBehaviour {
 		outofmap = false;
 		tiletotest = currenttile;
 		FindTileTag ();
+		blockCounter = 0;
 
 	}
 
 	// Update is called once per frame
 	void Update () {
+		if (Input.GetKeyDown (KeyCode.R)) {
+			blockCounter = 0;
+		}
 		//Debug.Log (beingdragged);
 		//myswipe = Swiping.mydirection;
 		//Debug.Log (levelWonBoard);
@@ -98,6 +103,10 @@ public class CharacterMovement : MonoBehaviour {
 				this.enabled = false;
 
 			} else if (nextaction == "Outerwall_Action") {
+				string element = elementchanger.myelement;
+				int number = elementchanger.mynumber;
+				blockCounter = blockCounter + 1;
+				ScoreKeeper.AddBlock (element, number, blockCounter);
 				elementchanger.RemoveElement ();
 				elementchanger.RemoveNumber ();
 				nextaction = null;			}
