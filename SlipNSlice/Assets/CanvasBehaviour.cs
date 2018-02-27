@@ -29,7 +29,7 @@ public class CanvasBehaviour : MonoBehaviour {
 		width = RTransform.rect.width;
 		height = RTransform.rect.height;
 
-		Debug.Log(height + " + " + width);
+		//Debug.Log(height + " + " + width);
 		given = true;
 
 	}

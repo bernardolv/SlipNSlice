@@ -29,9 +29,9 @@ public class HeroAreaScaling : MonoBehaviour {
 	}
 	void SetSize(){
 		float canvasheight = CanvasBehaviour.height;
-		Debug.Log (canvasheight + "SS");
+		//Debug.Log (canvasheight + "SS");
 		myheight = (canvasheight / maxSreenHeightDivider) - (canvasheight / cardAreaDivider) - (canvasheight / healthbarAreaDivider);
-		Debug.Log ("MYHEIGHT" + myheight);
+		//Debug.Log ("MYHEIGHT" + myheight);
 		mywidth = CanvasBehaviour.width;
 		float offset = myheight / 2;
 		float myy = (canvasheight / cardAreaDivider) + (canvasheight / healthbarAreaDivider)  + offset;

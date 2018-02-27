@@ -24,7 +24,6 @@ public class OuterwallBehaviour : MonoBehaviour {
 			tilescript.isTaken = true;
 			myTile = tileobject;
 			tilescript.myTaker = this.gameObject;
-			Debug.Log ("STOP");
 		}
 	}
 }

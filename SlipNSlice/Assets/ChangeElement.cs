@@ -36,7 +36,7 @@ public class ChangeElement : MonoBehaviour {
 	public void AssignColor(){
 		int index = Random.Range(0, elements.Length);
 		myelement = elements[index];
-		Debug.Log(myelement);
+		//Debug.Log(myelement);
 		if (myelement == "Fire") {
 			myspriterenderer.color = new Color(173/255f,3/255f,3/255f,255/255f);
 		}
@@ -59,6 +59,7 @@ public class ChangeElement : MonoBehaviour {
 		mynumber = numbers [index];
 		string mynumberstring = mynumber.ToString ();
 		mycanvas.GetComponent<Text>().text = mynumberstring;
+		transform.tag = "Outerwall";
 
 	}
 	public void RemoveElement(){

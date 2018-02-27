@@ -44,7 +44,7 @@ public class Dragger : MonoBehaviour {
 			transform.position = curPosition;
 			myPosition = transform.position;
 			FindHoveredTile ();
-			Touch t = Input.GetTouch(0);
+			//Touch t = Input.GetTouch(0);
 			//save began touch 2d point
 			//Swiping.firstPressPos = new Vector2(t.position.x,t.position.y);
 		//}

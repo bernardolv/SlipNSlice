@@ -55,7 +55,7 @@ public class CardList : MonoBehaviour {
 		carddic.Add(12, no12);
 
 
-		Debug.Log (carddic.Count);
+//		Debug.Log (carddic.Count);
 	}
 	
 	// Update is called once per frame

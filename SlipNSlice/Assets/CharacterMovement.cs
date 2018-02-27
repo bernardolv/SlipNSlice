@@ -53,7 +53,7 @@ public class CharacterMovement : MonoBehaviour {
 			SceneLoading.gamelost = LevelLostBoard;
 		}
 		LevelLostBoard.SetActive (false);*/
-		Debug.Log ("TURNEDTOFF");
+		//Debug.Log ("TURNEDTOFF");
 		outofmap = false;
 		tiletotest = currenttile;
 		FindTileTag ();
@@ -63,7 +63,7 @@ public class CharacterMovement : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.R)) {
+		if (Input.GetKeyDown (KeyCode.R) || Input.GetKeyDown(KeyCode.L)) {
 			blockCounter = 0;
 		}
 		//Debug.Log (beingdragged);
@@ -109,6 +109,10 @@ public class CharacterMovement : MonoBehaviour {
 				ScoreKeeper.AddBlock (element, number, blockCounter);
 				elementchanger.RemoveElement ();
 				elementchanger.RemoveNumber ();
+				ScoreKeeper.CheckSameElement (blockCounter);
+				ScoreKeeper.CheckSameNumber (blockCounter);
+				ScoreKeeper.CheckStraight (blockCounter);
+				ScoreKeeper.CheckUniqueElement (blockCounter);
 				nextaction = null;			}
 			else if (nextaction == "Left_Action") {
 				tiletotest = currenttile;
@@ -274,6 +278,7 @@ public class CharacterMovement : MonoBehaviour {
 			} else if (tilescript.myTaker.tag == "Outerwall") {
 				//the desired tile is the previous one and u stop looking for next tiles.
 				walltoturnoff = tilescript.myTaker;
+				walltoturnoff.tag = "Wall";
 				elementchanger = walltoturnoff.GetComponent<ChangeElement> ();
 				//elementchanger.RemoveElement ();
 				//readytoturnoff = true;
