@@ -2,8 +2,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ScoreKeeper.cs">
     <Files>
-      <File FileName="Assets/ScoreKeeper.cs" Line="114" Column="23" />
-      <File FileName="Assets/CharacterMovement.cs" Line="115" Column="51" />
+      <File FileName="Assets/ActiveSkillBar.cs" Line="8" Column="25" />
+      <File FileName="Assets/ScoreKeeper.cs" Line="95" Column="37" />
+      <File FileName="Assets/CharacterMovement.cs" Line="1" Column="1" />
       <File FileName="Assets/Dragger.cs" Line="1" Column="1" />
       <File FileName="Assets/CardList.cs" Line="1" Column="1" />
       <File FileName="Assets/Block.cs" Line="1" Column="1" />

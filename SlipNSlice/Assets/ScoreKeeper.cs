@@ -61,6 +61,7 @@ public class ScoreKeeper : MonoBehaviour {
 	public static void GetScoreInts(){
 		for (int i = 1; i < blockdic.Count + 1; i++) {
 			CheckSameElement (i);
+			//CheckSameNumber ();
 		}
 		elementblocks.Clear ();
 		blockdic.Clear ();
@@ -96,6 +97,7 @@ public class ScoreKeeper : MonoBehaviour {
 		else if (numberblocks.ContainsValue (mynumber)) {
 			sameNumberCounter++;
 			numberblocks.Add (num, mynumber);
+			assignNumberScore(mynumber, sameNumberCounter);
 			//Debug.Log ("Same Number" + (sameNumberCounter + 1));
 		} else {
 			Debug.Log ("New Number");
@@ -123,6 +125,7 @@ public class ScoreKeeper : MonoBehaviour {
 			assignStraightScore (2, 1);
 			assignStraightScore (3, 1);
 			assignStraightScore (4, 1);
+			Debug.Log ("Straight finished");
 		} else {
 			straightkeeper = 0;
 		}
@@ -153,6 +156,26 @@ public class ScoreKeeper : MonoBehaviour {
 		float currentscore = activeSkillMultipliers [number];
 		currentscore = currentscore + multiplier;
 		activeSkillMultipliers [number] = currentscore;
+	}
+	public static void assignNumberScore (int activenum, int combocounter){
+		Debug.Log (combocounter);
+		float currentscore = activeSkillMultipliers [activenum];
+		float multiplier = 0;
+		if (combocounter == 1) {
+			multiplier = 1f;
+		}
+		if (combocounter == 2) {
+			multiplier = .5f;
+		}
+		if (combocounter == 3) {
+			multiplier = 1.5f;
+		}
+		if (combocounter > 3) {
+			multiplier = .5f;
+		}
+		currentscore = currentscore + multiplier;
+		activeSkillMultipliers [activenum] = currentscore;
+		//Debug.Log (element + "+" + currentscore);
 	}
 	public static void assignElementScore(string element, int combocounter){
 		Debug.Log (combocounter);
